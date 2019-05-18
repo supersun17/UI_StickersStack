@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'UI_StickersStack_Example' do
+  pod 'UI_StickersStack', :path => '../'
+
+  target 'UI_StickersStack_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
