@@ -1,0 +1,6 @@
+framework module UI_StickersStack {
+  umbrella header "UI_StickersStack-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "UI_StickersStack",
+  "version": "0.1.0",
+  "summary": "A short description of UI_StickersStack.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/supersun17/UI_StickersStack",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Ming Sun": "mingsun.nolan@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/supersun17/UI_StickersStack.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": "UI_StickersStack/Classes/**/*"
+}
