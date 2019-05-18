@@ -1,5 +1,5 @@
 PODS:
-  - UI_StickersStack (0.1.0)
+  - UI_StickersStack (0.0.1)
 
 DEPENDENCIES:
   - UI_StickersStack (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  UI_StickersStack: 926e94a1d706c09064c73f2d25b8c7c3df6dd1a1
+  UI_StickersStack: 01fb6479bd2e613d85c8675077bc0768c799d1c3
 
 PODFILE CHECKSUM: 058ddb07cc58cd7456c322be3b6ba92b9df77162
 
