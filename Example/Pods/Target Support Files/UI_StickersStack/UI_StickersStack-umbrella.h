@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "UI_StickersStack.h"
 
 FOUNDATION_EXPORT double UI_StickersStackVersionNumber;
 FOUNDATION_EXPORT const unsigned char UI_StickersStackVersionString[];
