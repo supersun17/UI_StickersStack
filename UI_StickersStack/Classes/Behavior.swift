@@ -31,4 +31,7 @@ extension ContentsMappable {
 	func insertContent(at i: Int, _ contentIndex: Int) {
 		contentsMapping.insert(contentIndex, at: i)
 	}
+	func appendContent(_ contentIndex: Int) {
+		contentsMapping.append(contentIndex)
+	}
 }

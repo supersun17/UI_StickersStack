@@ -25,6 +25,7 @@ public class StickersStack: UIView, ContentsMappable {
 	}
 	public var stickerSwipeBoundry: CGFloat = 0.75
 	public var stickerAniamtionDuration: TimeInterval = 0.75
+	public var stickerReformAnimationDuration: TimeInterval = 0.3
 
 	/**
 	stickers array is used as a stack, consider it: [bottom,.....,top]
@@ -34,20 +35,10 @@ public class StickersStack: UIView, ContentsMappable {
 	var contentsMapping: [Int] = []
 	public var maxVisibleStickers: Int = 5
 
-	override init(frame: CGRect) {
-		super.init(frame: frame)
+	public override func layoutSubviews() {
+		super.layoutSubviews()
 
-		initialSetup()
-	}
-
-	required init?(coder aDecoder: NSCoder) {
-		super.init(coder: aDecoder)
-
-		initialSetup()
-	}
-
-	private func initialSetup() {
-		observeChanges()
+		redoStickers()
 	}
 }
 
@@ -59,6 +50,20 @@ extension StickersStack: StickerBehaviorDelegate {
 		rebuildContent()
 	}
 
+	public func addNewSticker() {
+		appendContent(stickers.count)
+		var newSticker: Sticker!
+		if stickers.count >= maxVisibleStickers {
+			newSticker = stickers.removeFirst()
+			newSticker.prepareForReuse()
+			setupSticker(newSticker, at: getContentsCount() - 1)
+		} else {
+			newSticker = addSticker(at: getContentsCount() - 1)
+		}
+		addNewVisibleStickerToTop(newSticker)
+		redoStickers()
+	}
+
 	private func rebuildContent() {
 		removeAll()
 		let endIndex = getContentsCount() - 1
@@ -67,7 +72,7 @@ extension StickersStack: StickerBehaviorDelegate {
 			let sticker = addSticker(at: i)
 			addNewVisibleStickerToTop(sticker)
 		}
-		redoTransform()
+		redoStickers()
 	}
 
 	func addSticker(at i: Int) -> Sticker {
@@ -97,13 +102,11 @@ extension StickersStack: StickerBehaviorDelegate {
 	func addNewVisibleStickerToTop(_ sticker: Sticker) {
 		stickers.append(sticker)
 		bringSubview(toFront: sticker)
-		redoTransform()
 	}
 
 	func newVisibleStickerAddedToBack(_ sticker: Sticker) {
 		stickers.insert(sticker, at: 0)
 		sendSubview(toBack: sticker)
-		redoTransform()
 	}
 
 	func removeSticker(at i: Int) {
@@ -146,14 +149,7 @@ extension StickersStack: StickerBehaviorDelegate {
 
 // ******** Animation related ********
 extension StickersStack {
-	func observeChanges() {
-		NotificationCenter.default.addObserver(self,
-											   selector: #selector(orientationDidChange),
-											   name: NSNotification.Name.UIDeviceOrientationDidChange,
-											   object: nil)
-	}
-
-	@objc func orientationDidChange() {
+	func redoStickers() {
 		redoFrame()
 		redoTransform()
 	}
@@ -170,9 +166,7 @@ extension StickersStack {
 	private func redoTransform() {
 		for (i,s) in stickers.enumerated() {
 			if !s.isBeingDragged {
-				s.reset()
 				s.swing(CGFloat(stickers.count - 1 - i) / 100)
-				s.saveCurrentState()
 			}
 		}
 	}

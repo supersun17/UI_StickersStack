@@ -42,20 +42,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00161E2E8741D6F1CDA9658BFB31AA17 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		00161E2E8741D6F1CDA9658BFB31AA17 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		010D60854B49AF24668C930103783833 /* Pods-UI_StickersStack_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_StickersStack_Example-frameworks.sh"; sourceTree = "<group>"; };
 		051C997E226C6CE818C76C4F02BFD337 /* Pods-UI_StickersStack_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UI_StickersStack_Example.modulemap"; sourceTree = "<group>"; };
 		080F4C7620B0D21E3F48C61B998A7C36 /* Pods-UI_StickersStack_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_StickersStack_Tests-resources.sh"; sourceTree = "<group>"; };
 		0C4A5E1C33A8B3C2DB864241880894B2 /* Pods-UI_StickersStack_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_StickersStack_Example.release.xcconfig"; sourceTree = "<group>"; };
 		0FC90A5BD53302227AA0548A895280A9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2012A431B44A8DBE2B7418A4A11CB6A6 /* StickersStack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StickersStack.swift; path = UI_StickersStack/Classes/StickersStack.swift; sourceTree = "<group>"; };
-		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		24509BF2945A23F162E01D4FE3BB177A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24509BF2945A23F162E01D4FE3BB177A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		248DF127672AB92816D67AA970F81FC9 /* Pods-UI_StickersStack_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-UI_StickersStack_Tests.modulemap"; sourceTree = "<group>"; };
 		2A33CB25A68D6517EA36CCD047E4B7F2 /* ElementsPool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ElementsPool.swift; path = UI_StickersStack/Classes/ElementsPool.swift; sourceTree = "<group>"; };
 		50DADA0D725A80FC89BC2B5331F13A3D /* Behavior.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Behavior.swift; path = UI_StickersStack/Classes/Behavior.swift; sourceTree = "<group>"; };
 		55B0A2C6E01E7D43180E2EF4E2578E0B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		57D1E1DE940393965D70CB3BEA2B4FF2 /* UI_StickersStack.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = UI_StickersStack.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		57D1E1DE940393965D70CB3BEA2B4FF2 /* UI_StickersStack.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = UI_StickersStack.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		636461B7B0CF62786ED1C94FABE4F14D /* UI_StickersStack.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UI_StickersStack.xcconfig; sourceTree = "<group>"; };
 		6601BCA2CF177887C998AA907E1458E3 /* UI_StickersStack-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UI_StickersStack-umbrella.h"; sourceTree = "<group>"; };
 		667B5C7887F885E653F73A13E1ADC3BF /* UI_StickersStack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UI_StickersStack.h; path = UI_StickersStack/Classes/UI_StickersStack.h; sourceTree = "<group>"; };
@@ -66,10 +66,10 @@
 		8D0D1FEE54B9BB08338CF09EEB8C0BF0 /* Pods-UI_StickersStack_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_StickersStack_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9869100306D1681E27777CA35129EB1C /* Pods-UI_StickersStack_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UI_StickersStack_Tests-dummy.m"; sourceTree = "<group>"; };
 		9AEE59F9BA73E9752D61446A8B8135D9 /* Pods-UI_StickersStack_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UI_StickersStack_Tests-umbrella.h"; sourceTree = "<group>"; };
-		9BDA7B6CB4909058033F8563B806DCEB /* Pods_UI_StickersStack_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_StickersStack_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BDA7B6CB4909058033F8563B806DCEB /* Pods_UI_StickersStack_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UI_StickersStack_Tests.framework; path = "Pods-UI_StickersStack_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FC816E1E950CC6FCAF6B6A830F732D9 /* Pods-UI_StickersStack_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-UI_StickersStack_Example-dummy.m"; sourceTree = "<group>"; };
 		AF7AA8E343326EB07CFFB7BFC89E86EB /* Pods-UI_StickersStack_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UI_StickersStack_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B42EDE7BC7827647D8C3911924604398 /* UI_StickersStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UI_StickersStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42EDE7BC7827647D8C3911924604398 /* UI_StickersStack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UI_StickersStack.framework; path = UI_StickersStack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B72959751868AB0F4D5A27F71C4291D6 /* Pods-UI_StickersStack_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-UI_StickersStack_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		B730AA3F8D5639D1936A67EA23CAB79F /* TransformView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformView.swift; path = UI_StickersStack/Classes/TransformView.swift; sourceTree = "<group>"; };
 		C685029418D33FDA68EF450B1FA57429 /* Pods-UI_StickersStack_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_StickersStack_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		D284833FFBB04A2365D6351E2615FF29 /* UI_StickersStack-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UI_StickersStack-prefix.pch"; sourceTree = "<group>"; };
 		D59A94755FE93E9E0B51C977D712046D /* Pods-UI_StickersStack_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-UI_StickersStack_Example-umbrella.h"; sourceTree = "<group>"; };
 		D82C617A522646C48D22ECC5CE681A0D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DB6306020850CE88D15A70E43AA9021C /* Pods_UI_StickersStack_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_StickersStack_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB6306020850CE88D15A70E43AA9021C /* Pods_UI_StickersStack_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_UI_StickersStack_Example.framework; path = "Pods-UI_StickersStack_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E39AC3099AC411371EBC9D94ED888C51 /* UI_StickersStack.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UI_StickersStack.modulemap; sourceTree = "<group>"; };
 		EAA3E62240C19F0940ED31DFBCA6D771 /* Pods-UI_StickersStack_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UI_StickersStack_Example-resources.sh"; sourceTree = "<group>"; };
 		F9DCA79A5BD5D3AF34184F333BFA1476 /* Pods-UI_StickersStack_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UI_StickersStack_Tests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -337,11 +337,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
-				TargetAttributes = {
-					48AAE1CCA64938282A38F79E57F1F063 = {
-						LastSwiftMigration = 1010;
-					};
-				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -758,7 +753,8 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 4.2;
 				SYMROOT = "${SRCROOT}/../build";
 			};

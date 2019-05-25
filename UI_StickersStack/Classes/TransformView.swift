@@ -63,6 +63,7 @@ class TransformView: UIView {
 		} else {
 			transform.concatenating(rotTransform)
 		}
+		saveCurrentState()
 	}
 
 	/**
