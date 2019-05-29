@@ -46,24 +46,30 @@ class TransformView: UIView {
 		if layer.anchorPoint != CGPoint.init(x: 0.5, y: 0.5) {
 			moveAnchorPointToCenter()
 		}
+		alpha = 1
 	}
 
 	/**
 	Swing, anchor at view's top left
+	- Note: Optional closure parameters are not allowed to be annotated because they are always implicitly escaping
 	- Parameters:
 		degree: ranging from 0.00 - 1.00, will be scaled into 0 - 2pi
 	- Returns: void
 	**/
-	func swing(_ degree: CGFloat) {
+	func swing(_ degree: CGFloat, animated: Bool = true, _ completionHandle: (() -> Void)? = nil) {
 		moveAnchorPointToTopLeft()
 		let rotation = -CGFloat(degree * CGFloat.pi)
 		let rotTransform = CGAffineTransform.init(rotationAngle: rotation)
-		if transform.isIdentity {
-			transform = rotTransform
-		} else {
-			transform.concatenating(rotTransform)
+
+		let animationDuration = (animated) ? (duration):(0)
+		UIView.animate(withDuration: animationDuration, animations: {
+			self.transform = rotTransform
+		}) { (didComplete) in
+			if didComplete {
+				self.saveCurrentState()
+				completionHandle?()
+			}
 		}
-		saveCurrentState()
 	}
 
 	/**
@@ -91,16 +97,35 @@ class TransformView: UIView {
 		transform = sclTransform
 	}
 
+	/**
+	Swing, anchor at view's top left
+	- Note: Optional closure parameters are not allowed to be annotated because they are always implicitly escaping
+	- Parameters:
+	degree: ranging from 0.00 - 1.00, will be scaled into 0 - 1.0
+	- Returns: void
+	**/
+	func disappear(_ completionHandle: (() -> Void)? = nil) {
+		UIView.animate(withDuration: duration, animations: {
+			self.alpha = 0
+		}) { (didComplete) in
+			if didComplete { completionHandle?() }
+		}
+	}
+
 	func moveAnchorPointToTopLeft() {
-		let origin = frame.origin
-		layer.anchorPoint = CGPoint.init(x: 0, y: 0)
-		layer.position = origin
+		if layer.anchorPoint != CGPoint.init(x: 0, y: 0) {
+			let origin = frame.origin
+			layer.anchorPoint = CGPoint.init(x: 0, y: 0)
+			layer.position = origin
+		}
 	}
 
 	func moveAnchorPointToCenter() {
-		let center = CGPoint.init(x: (frame.minX + frame.maxX) / 2,
-								  y: (frame.minY + frame.maxY) / 2)
-		layer.anchorPoint = CGPoint.init(x: 0.5, y: 0.5)
-		layer.position = center
+		if layer.anchorPoint != CGPoint.init(x: 0.5, y: 0.5) {
+			let center = CGPoint.init(x: (frame.minX + frame.maxX) / 2,
+									  y: (frame.minY + frame.maxY) / 2)
+			layer.anchorPoint = CGPoint.init(x: 0.5, y: 0.5)
+			layer.position = center
+		}
 	}
 }

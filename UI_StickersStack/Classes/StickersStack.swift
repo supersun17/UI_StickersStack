@@ -34,34 +34,33 @@ public class StickersStack: UIView, ContentsMappable {
 	private var stickers: [Sticker] = []
 	var contentsMapping: [Int] = []
 	public var maxVisibleStickers: Int = 5
-
-	public override func layoutSubviews() {
-		super.layoutSubviews()
-
-		redoStickers()
-	}
 }
 
 // ******** StickerPresentation related ********
 extension StickersStack: StickerBehaviorDelegate {
+	/**
+	This methode will be added to main queue, and be executed later. This way it can be properly displayed after layout is done.
+	- Parameters: -
+	- Returns: -
+	**/
 	public func reloadStack() {
-		guard let newCount = dataSource?.numberOfStickers(), newCount != 0 else { return }
-		rebuildContents(with: newCount)
-		rebuildContent()
+		DispatchQueue.main.async {
+			guard let newCount = self.dataSource?.numberOfStickers(), newCount != 0 else { return }
+			self.rebuildContents(with: newCount)
+			self.rebuildContent()
+		}
 	}
 
 	public func addNewSticker() {
-		appendContent(stickers.count)
-		var newSticker: Sticker!
+		appendContent(getContentsCount())
 		if stickers.count >= maxVisibleStickers {
-			newSticker = stickers.removeFirst()
-			newSticker.prepareForReuse()
-			setupSticker(newSticker, at: getContentsCount() - 1)
-		} else {
-			newSticker = addSticker(at: getContentsCount() - 1)
+			let oldSticker = stickers.removeFirst()
+			oldSticker.disappear({ self.stickersPool.release(oldSticker) })
 		}
+		let newSticker = addSticker(at: getContentsCount() - 1)
 		addNewVisibleStickerToTop(newSticker)
-		redoStickers()
+		newSticker.swing(CGFloat(-1) / 100, animated: false)
+		redoTransform()
 	}
 
 	private func rebuildContent() {
@@ -111,16 +110,16 @@ extension StickersStack: StickerBehaviorDelegate {
 
 	func removeSticker(at i: Int) {
 		let startIndex = getContentsCount() - stickers.count
-		let sticker = stickers.remove(at: i)
-		stickersPool.release(sticker)
+		let oldSticker = stickers.remove(at: i)
+		stickersPool.release(oldSticker)
 		removeContent(at: startIndex + i)
 		let next = getContentsCount() - 1 - stickers.count
 		if next >= 0 {
 			let sticker = addSticker(at: next)
 			newVisibleStickerAddedToBack(sticker)
-		} else {
-			redoTransform()
+			sticker.swing(CGFloat(stickers.count - 1) / 100, animated: false)
 		}
+		redoTransform()
 	}
 
 	func removeAll() {

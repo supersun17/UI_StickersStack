@@ -12,7 +12,7 @@ import UI_StickersStack
 class ViewController: UIViewController {
 	@IBOutlet weak var stickersStack: StickersStack!
 
-	var colorList: [UIColor] = [.blue,.blue,.blue,.blue]
+	var colorList: [UIColor] = [.blue,.blue,.blue,.blue,.blue,.blue,.blue]
 
     override func viewDidLoad() {
         super.viewDidLoad()
